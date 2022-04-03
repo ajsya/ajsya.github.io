@@ -1,7 +1,7 @@
 class CommandPrompt {
   constructor(options) {
-    this.user = options?.user || 'mystpi';
-    this.host = options?.host || 'laptop';
+    this.user = options?.user || 'ajsya';
+    this.host = options?.host || 'desktop';
     this.dir = options?.dir || '~/';
     this.cursorStyle = options?.cursor || '█';
 
@@ -111,8 +111,8 @@ class CommandPrompt {
 
 
 async function main() {
-  const mystpi = await fetch('https://api.github.com/users/MystPi').then(res => res.json());
-  const repos = await fetch('https://api.github.com/users/MystPi/repos').then(res => res.json());
+  const ajsya = await fetch('https://api.github.com/users/ajsya').then(res => res.json());
+  const repos = await fetch('https://api.github.com/users/ajsya/repos').then(res => res.json());
 
   const prompt = new CommandPrompt();
 
@@ -134,7 +134,7 @@ async function main() {
     },
     {
       type: 'output',
-      text: mystpi.bio
+      text: ajsya.bio
     },
     {
       type: 'newLine'
@@ -147,7 +147,7 @@ async function main() {
       type: 'do',
       func() {
         const img = document.createElement('img');
-        img.src = mystpi.avatar_url;
+        img.src = ajsya.avatar_url;
         img.width = 100;
         img.height = 100;
         img.alt = 'profile picture';
@@ -169,17 +169,16 @@ async function main() {
           name: 'Home'
         },
         {
-          name: 'Blog',
-          url: '/blog'
-        },
-        {
           name: 'GitHub',
-          url: 'https://github.com/MystPi'
+          url: 'https://github.com/ajsya'
         },
         {
           name: 'Scratch',
-          url: 'https://scratch.mit.edu/users/NFlex23'
-        }
+          url: 'https://scratch.mit.edu/users/ajsya'
+        },
+        {
+          name: 'Wastof.money',
+          url: 'https://wasteof.money/users/ajsya'
       ]
     },
     {
