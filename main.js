@@ -179,6 +179,7 @@ async function main() {
         {
           name: 'Wastof.money',
           url: 'https://wasteof.money/users/ajsya'
+        }
       ]
     },
     {
