@@ -198,7 +198,7 @@ async function main() {
     },
     {
       type: 'write',
-      text: 'ls | progress --to 50'
+      text: 'ls | progress --to 30'
     },
     {
       type: 'output',
