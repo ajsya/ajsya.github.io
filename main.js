@@ -202,7 +202,7 @@ async function main() {
     },
     {
       type: 'output',
-      text: `${repos.length}/50\n${Math.round(repos.length / 30 * 100)}%`
+      text: `${repos.length}/50\n${Math.round(repos.length / 50 * 100)}%`
     },
     {
       type: 'newLine'
