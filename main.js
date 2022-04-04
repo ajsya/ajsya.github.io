@@ -198,11 +198,11 @@ async function main() {
     },
     {
       type: 'write',
-      text: 'ls | progress --to 30'
+      text: 'ls | progress --to 50'
     },
     {
       type: 'output',
-      text: `${repos.length}/30\n${Math.round(repos.length / 30 * 100)}%`
+      text: `${repos.length}/30\n${Math.round(repos.length / 50 * 100)}%`
     },
     {
       type: 'newLine'
@@ -215,6 +215,17 @@ async function main() {
       type: 'tree',
       dir: './repos/',
       data: repos.map(repo => ({name: repo.name, url: repo.html_url}))
+    },
+    {
+      type: 'newLine'
+    },
+     {
+      type: 'write',
+      text: 'cat credits.txt'
+    },
+    {
+      type: 'output',
+      text: 'Thank you Mystpi for all the original code for this website that I have modified!'
     },
     {
       type: 'newLine'
