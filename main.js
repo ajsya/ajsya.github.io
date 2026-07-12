@@ -1,7 +1,7 @@
 class CommandPrompt {
   constructor(options) {
     this.user = options?.user || 'ajsya';
-    this.host = options?.host || 'desktop';
+    this.host = options?.host || 'Macbook';
     this.dir = options?.dir || '~/';
     this.cursorStyle = options?.cursor || '█';
 
@@ -198,17 +198,6 @@ async function main() {
     },
     {
       type: 'write',
-      text: 'ls | progress --to 30'
-    },
-    {
-      type: 'output',
-      text: `${repos.length}/30\n${Math.round(repos.length / 30 * 100)}%`
-    },
-    {
-      type: 'newLine'
-    },
-    {
-      type: 'write',
       text: 'tree'
     },
     {
@@ -225,7 +214,7 @@ async function main() {
     },
     {
       type: 'output',
-      text: 'Thank you Mystpi for all the original code for this website that I have modified!'
+      text: 'Thank you Mystpi for the original code for this website which I have since modified!'
     },
     {
       type: 'newLine'
@@ -237,11 +226,14 @@ async function main() {
     {
       type: 'output',
       text: 'logout'
+    },
+    {
+      type: 'output',
+      text: 'Connection to ajsya.github.io closed.'
     }
   ];
 
   await prompt.fromArray(data);
 }
-
 
 main();
